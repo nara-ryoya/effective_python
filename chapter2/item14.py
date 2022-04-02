@@ -21,3 +21,18 @@ geniuses.sort(key=lambda x: x.name)
 print(geniuses)
 geniuses.sort(key=lambda x: x.hensachi)
 print(geniuses)
+
+
+
+tup_list = [("apple", 20), ("cherry", 30), ("banana", 10), ("cherry", 20)]
+
+# アルファベット順に並べる
+tup_list.sort(key=lambda x: x[0], reverse=True)
+print(tup_list)
+# 数が大きい方から並べ、同一のものがあればアルファベットの逆順に並べる
+tup_list.sort(key=lambda x: (x[1], x[0]), reverse=True)
+print(tup_list)
+# 数字が大きい方から並べ、同一のものがあればアルファベット順に並べる
+# 数字はマイナスにすることで並び方が逆順になることを利用。
+tup_list.sort(key=lambda x: (-x[1], x[0]))
+print(tup_list)
