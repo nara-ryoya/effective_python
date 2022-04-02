@@ -12,3 +12,9 @@ print(first, second, others)
 # OK例。「*hoge」で「それ以外全部」を受け取れる(=catch-all unpack)
 first, second, *others = a
 print(first, second, others)
+
+# *hogeに入れるものがない場合は空のリストになる。
+# 「少なくともN個ある」とわかっている処理で使えそう
+b = [1, 2]
+first, second, *others = b
+print(first, second, others)
